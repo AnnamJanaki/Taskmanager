@@ -1,0 +1,26 @@
+<h2 class="text-center">Signup</h2>
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <form (ngSubmit)="signup()" #signupForm="ngForm" class="w-50">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name" required [(ngModel)]="signupData.name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" required [(ngModel)]="signupData.email" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" id="password" name="password" required [(ngModel)]="signupData.password" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required [(ngModel)]="signupData.confirmPassword" class="form-control">
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Signup</button>
+      </div>
+    </form>
+  </div>
+</div>

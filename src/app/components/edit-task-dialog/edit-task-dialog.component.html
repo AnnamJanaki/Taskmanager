@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Edit Task</h2>
+<button type="button" class="btn btn-secondary" (click)="cancel()">
+  <i class="bi bi-x"></i> 
+</button>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="task.title" placeholder="Title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="task.description" placeholder="Description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button  class = button mat-button (click)="updateTask()">Update Task</button>
+  
+</div>
