@@ -9,7 +9,13 @@ import { TaskManagerComponent } from './components/task-manager/task-manager.com
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'task-manager', component: TaskManagerComponent },
+  {
+    path: 'task-manager',
+    loadChildren: () =>
+      import('./components/task-manager/task-manager.module').then(
+        (m) => m.TaskManagerModule
+      ),
+  },
   { path: '', component: HomeComponent },
 ];
 

@@ -31,7 +31,9 @@ export class TaskManagerComponent {
     completed: false
   };
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) {
+    console.log('TaskManagerComponent');
+  }
 
   addTask() {
     // Generate a unique ID for the new task
@@ -53,7 +55,7 @@ export class TaskManagerComponent {
     // Open the dialog for editing the task
     const dialogRef = this.dialog.open(EditTaskDialogComponent, {
       width: '300px',
-      
+
       data: { task: { ...task } } // Pass a copy of the task to the dialog
     });
 

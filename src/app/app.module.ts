@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { TaskManagerModule } from './components/task-manager/task-manager.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatDialogModule,
     HttpClientModule,
     NgbDropdownModule,
+    TaskManagerModule
   ],
 
   providers: [],

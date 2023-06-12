@@ -1,7 +1,6 @@
-<h1 class="heading-center">Task Manager</h1>
+<app-header></app-header>
 
 <div class="container">
-
   <div class="create-task-section">
     <h2>Create New Task</h2>
     <div class="form-group">
@@ -36,18 +35,39 @@
             <i class="bi bi-pencil"></i> Edit
           </button>
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="kebabMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="kebabMenu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               <i class="bi bi-three-dots-vertical"></i>
             </button>
             <ul class="dropdown-menu" aria-labelledby="kebabMenu">
-              <li><button class="dropdown-item" (click)="completeTask(task)"><i class="bi bi-check-circle-fill"></i> Complete Task</button></li>
-              <li><button class="dropdown-item" (click)="undoTask(task)"><i class="bi bi-arrow-counterclockwise"></i> Undo Task</button></li>
-              <li><button class="dropdown-item" (click)="removeTask(task)"><i class="bi bi-trash-fill"></i> Remove Task</button></li>
+              <li>
+                <button class="dropdown-item" (click)="completeTask(task)">
+                  <i class="bi bi-check-circle-fill"></i> Complete Task
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" (click)="undoTask(task)">
+                  <i class="bi bi-arrow-counterclockwise"></i> Undo Task
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" (click)="removeTask(task)">
+                  <i class="bi bi-trash-fill"></i> Remove Task
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </div>
-
 </div>
+
+
+<app-footer></app-footer>
