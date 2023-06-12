@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+import { User } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-login',
@@ -8,39 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  loginData = { email: '', password: '' };
+  loginData: User = { email: '', password: '' };
   loginError: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private router: Router, private loginService: LoginService) {}
 
-  login() {
-    this.http.post('http://localhost:8087/login', this.loginData).subscribe(
+  onLogin() {
+    this.loginService.login(this.loginData).subscribe(
       (response: any) => {
-        
         console.log('Login successful');
-        this.loginData = { email: '', password: '' };
+        this.loginData = response;
         this.loginError = '';
-        const userId = response.userId;
-        this.getRedirectUrl(userId);
+        localStorage.setItem('UserData', JSON.stringify(response));
+        this.router.navigate(['task-manager']);
       },
       (error) => {
-        
         console.error('Error during login:', error);
-        this.loginError = 'Invalid email or password. Please try again.';
-      }
-    ); 
-  }
-
-  getRedirectUrl(userId: string) {
-    const redirectUrl = `http://localhost:8087/redirect-url/${userId}`;
-    this.http.get(redirectUrl, { responseType: 'text' }).subscribe(
-      (response: any) => {
-        this.router.navigateByUrl(response);
-      },
-      (error) => {
-        console.error('Error getting redirect URL:', error);
       }
     );
-  } 
-  
+  }
 }

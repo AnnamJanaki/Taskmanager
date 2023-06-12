@@ -14,7 +14,7 @@ import { EditTaskDialogComponent } from './components/edit-task-dialog/edit-task
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,38 +23,22 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     HomeComponent,
     TaskManagerComponent,
-
-    
-    EditTaskDialogComponent
+    EditTaskDialogComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'signup', component: SignupComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'task-manager', component: TaskManagerComponent },
-    ]),
     RouterModule,
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
     HttpClientModule,
-    NgbDropdownModule
-
+    NgbDropdownModule,
   ],
-  
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
-
-interface Task {
-  id: number;
-  title: string;
-  description: string;
-  completed: boolean;
-}
+export class AppModule {}
