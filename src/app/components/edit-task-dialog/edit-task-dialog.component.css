@@ -1,23 +1,12 @@
-  
-  .button {
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    gap:10px;
-    margin-top: auto;
-    margin-bottom: 80px;
-    width: 200px;
-    height: 50px;
-  }
-  .btn-secondary {
-    position: absolute;
-    top: 50px;
-    margin-right: 50;
-    
-  }
-  
+/* .btn-secondary {
+  width: 20px;
+  height: 20px;
+} */
+
   .modal-header {
     position: relative;
   }
-  
+
+  .close-button {
+    
+  }

@@ -1,19 +1,19 @@
 body {
     background-color: lightblue;
   }
-  
+
   .container {
     padding: 20px;
   }
-  
+
   h2 {
     text-align: center;
   }
-  
+
   .form-control {
     background-color: white;
   }
-  
+
   .btn-primary {
     background-color: blue;
     color: white;
@@ -23,6 +23,7 @@ body {
     margin-top: auto;
     margin-bottom: 80px;
   }
+  
   .container {
     background-color: rgb(182, 196, 200);
     padding: 20px;
@@ -33,4 +34,3 @@ body {
     margin-top: 100px;
     margin-bottom: 20px;
   }
-  

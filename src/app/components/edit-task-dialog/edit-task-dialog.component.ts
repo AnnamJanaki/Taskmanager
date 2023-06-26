@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Task } from '../../interfaces/task.interface';
+import { TaskService } from '../../services/task.service';
 
 
 @Component({
@@ -8,19 +10,20 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./edit-task-dialog.component.css']
 })
 export class EditTaskDialogComponent {
-  task: any;
+  task: Task;
 
   constructor(
     public dialogRef: MatDialogRef<EditTaskDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private taskService: TaskService
   ) {
     this.task = data.task;
   }
 
   updateTask() {
-    // Perform any necessary task update logic here
-    // You can access the updated task using this.task
-    this.dialogRef.close(this.task); // Return the updated task to the parent component
+    this.taskService.updateTask(this.task).subscribe(task => {
+      this.dialogRef.close(this.task); // Return the updated task to the parent component
+    })
   }
 
   cancel() {

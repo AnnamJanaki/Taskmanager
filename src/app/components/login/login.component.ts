@@ -16,16 +16,19 @@ export class LoginComponent {
 
   onLogin() {
     this.loginService.login(this.loginData).subscribe(
-      (response: any) => {
-        console.log('Login successful');
+      (response: User) => {
         this.loginData = response;
         this.loginError = '';
-        localStorage.setItem('UserData', JSON.stringify(response));
+        localStorage.setItem('user', JSON.stringify(response));
         this.router.navigate(['task-manager']);
       },
       (error) => {
         console.error('Error during login:', error);
       }
     );
+  }
+
+  onSignUp() {
+    this.router.navigate(['signup']);
   }
 }

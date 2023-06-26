@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls:['./signup.component.css']
 })
 export class SignupComponent {
-  signupData = { name: '', email: '', password: '', confirmPassword: '' };
+  signupData = { username: '', email: '', password: '', confirmPassword: '' };
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -23,5 +23,11 @@ export class SignupComponent {
         // Handle error
         console.error('Signup failed:', error);
       });
+  }
+
+
+
+  onLogin() {
+    this.router.navigate(['login']);
   }
 }

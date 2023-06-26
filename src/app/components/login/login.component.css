@@ -2,7 +2,7 @@
 body {
     background-color: white;
   }
-  
+
   /* Style the login button with rounded edges and blue background */
   button[type="submit"] {
     border-radius: 20px;
@@ -16,26 +16,26 @@ body {
     align-items: center;
     text-align: center;
   }
-  
+
   /* Apply hover effect to the login button */
- 
-  
+
+
   /* Center align the login form container */
   .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   /* Center align the login heading */
   .login-heading {
     text-align: center;
   }
-  
+
   /* Adjust the label width for better alignment */
   .form-label {
     width: 100px;
   }
- 
-  
+
+
 

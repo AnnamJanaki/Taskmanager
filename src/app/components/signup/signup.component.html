@@ -4,7 +4,7 @@
     <form (ngSubmit)="signup()" #signupForm="ngForm" class="w-50">
       <div class="mb-3">
         <label for="name" class="form-label">Name:</label>
-        <input type="text" id="name" name="name" required [(ngModel)]="signupData.name" class="form-control">
+        <input type="text" id="name" name="name" required [(ngModel)]="signupData.username" class="form-control">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email:</label>
@@ -24,3 +24,5 @@
     </form>
   </div>
 </div>
+
+<button (click)="onLogin()">Login</button>

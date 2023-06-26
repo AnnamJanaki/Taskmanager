@@ -7,7 +7,8 @@ import { User } from '../interfaces/user.interface';
   providedIn: 'root',
 })
 export class LoginService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   login(params: User): Observable<any> {
     return this.http.post('http://localhost:8087/login', params);

@@ -1,6 +1,15 @@
-interface Task {
-  id: number;
+import { User } from './user.interface';
+
+export interface Task {
+  id?: number;
   title: string;
   description: string;
-  completed: boolean;
+  status: number;
+  user?: User;
+}
+
+export enum TaskStatus {
+  INPROGRESS = 0,
+  COMPLETED = 1,
+  DEFERRED = 2,
 }

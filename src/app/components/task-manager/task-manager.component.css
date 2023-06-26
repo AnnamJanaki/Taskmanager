@@ -17,25 +17,26 @@
     gap: 50px;
 
   }
-  
+
   .task-actions {
     display: flex;
     gap: 10px;
   }
   .completed-icon {
     color: green;
-    gap: 10px;
+    margin-left: 10px;
   }
+
   .task-details {
     flex: 1;
     gap: 30px;
   }
-  
+
   .task-status {
     margin-left: 10px;
     gap:500px;
   }
-  
+
   .zoom-effect:hover {
     transform: scale(1.2);
   }
@@ -85,12 +86,13 @@
   .btn-primary:hover {
     background-color: #0069d9;
   }
+
   .heading-center {
     text-align: center;
   }
 
   .container {
-    
+
     padding: 20px;
     border-radius: 50px;
     width: 400px;
@@ -115,7 +117,6 @@
     padding: 10px;
     margin-bottom: 10px;
   }
-  
-  
 
-  
+
+
