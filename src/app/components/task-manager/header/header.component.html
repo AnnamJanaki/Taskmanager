@@ -1,9 +1,36 @@
-
 <nav class="navbar navbar-light bg-light px-4">
   <a class="navbar-brand" href="#">
     <h1>Task Manager</h1>
   </a>
-  <div class="profile">
-    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" >
+  <div class="dropdown">
+    <div
+      class="profile dropdown-toggle"
+      (click)="openProfileMenu()"
+      id="kebabMenu"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img
+        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+      />
+    </div>
+    <ul
+      class="dropdown-menu dropdown-menu-end profile-dropdown"
+      aria-labelledby="kebabMenu"
+    >
+      <li class="dropdown-item">
+        <span class="material-symbols-outlined"> settings </span>
+        Settings
+      </li>
+      <li class="dropdown-item">
+        <span class="material-symbols-outlined"> construction </span>
+        Preferences
+      </li>
+      <hr />
+      <li class="dropdown-item"  (click)="onLogout()">
+        <span class="material-symbols-outlined"> logout </span>
+        Log out
+      </li>
+    </ul>
   </div>
 </nav>
